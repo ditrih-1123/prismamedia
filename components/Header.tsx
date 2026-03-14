@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { List, X } from "@phosphor-icons/react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navLinks = [
   { label: "Czech", href: "#czech-republic" },
@@ -40,34 +41,35 @@ export function Header() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className="relative border-b border-zinc-200 bg-white" ref={menuRef}>
+    <header className="relative border-b border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-900" ref={menuRef}>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <a href="#" className="font-sans text-xl font-bold tracking-tight text-zinc-900 sm:text-2xl">
+        <a href="#" className="font-sans text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-2xl">
           Prisma<span className="font-normal">Media</span>
         </a>
 
         <nav
           aria-label="Main navigation"
-          className="hidden gap-6 text-xs font-semibold uppercase tracking-[0.18em] text-zinc-700 md:flex"
+          className="hidden gap-6 text-xs font-semibold uppercase tracking-[0.18em] text-zinc-700 dark:text-zinc-300 md:flex"
         >
           {navLinks.map(({ label, href }) => (
-            <a key={href} href={href} className="hover:text-zinc-900">
+            <a key={href} href={href} className="hover:text-zinc-900 dark:hover:text-zinc-100">
               {label}
             </a>
           ))}
         </nav>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <a
             href="#"
-            className="hidden rounded-full border border-zinc-300 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-zinc-800 hover:bg-zinc-100 md:inline-flex lg:px-4"
+            className="hidden rounded-full border border-zinc-300 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-zinc-800 hover:bg-zinc-100 dark:border-zinc-600 dark:text-zinc-200 dark:hover:bg-zinc-800 md:inline-flex lg:px-4"
           >
             Subscribe
           </a>
           <button
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-zinc-700 hover:bg-zinc-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-zinc-700 hover:bg-zinc-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:focus-visible:ring-zinc-100 dark:focus-visible:ring-offset-zinc-900 md:hidden"
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -81,7 +83,7 @@ export function Header() {
         id="mobile-menu"
         role="dialog"
         aria-label="Mobile navigation"
-        className={`absolute left-0 right-0 top-full z-50 border-b border-zinc-200 bg-white shadow-lg md:hidden ${menuOpen ? "block" : "hidden"}`}
+        className={`absolute left-0 right-0 top-full z-50 border-b border-zinc-200 bg-white shadow-lg dark:border-zinc-700 dark:bg-zinc-900 md:hidden ${menuOpen ? "block" : "hidden"}`}
       >
         <nav className="mx-auto max-w-6xl px-4 py-4 sm:px-6" aria-label="Mobile navigation links">
           <ul className="flex flex-col gap-1">
@@ -90,7 +92,7 @@ export function Header() {
                 <a
                   href={href}
                   onClick={closeMenu}
-                  className="block rounded-lg px-4 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-zinc-700 hover:bg-zinc-50 hover:text-zinc-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
+                  className="block rounded-lg px-4 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-zinc-700 hover:bg-zinc-50 hover:text-zinc-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-zinc-100 dark:focus-visible:ring-zinc-100 dark:focus-visible:ring-offset-zinc-900"
                 >
                   {label}
                 </a>
@@ -100,7 +102,7 @@ export function Header() {
           <a
             href="#"
             onClick={closeMenu}
-            className="mt-4 flex w-full justify-center rounded-full border-2 border-zinc-900 bg-zinc-900 px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white hover:bg-zinc-800"
+            className="mt-4 flex w-full justify-center rounded-full border-2 border-zinc-900 bg-zinc-900 px-4 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-white hover:bg-zinc-800 dark:border-zinc-100 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
           >
             Subscribe
           </a>

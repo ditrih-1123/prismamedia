@@ -5,7 +5,7 @@ import { NewsBlockCard } from "@/components/NewsBlockCard";
 import { SectionHeader } from "@/components/SectionHeader";
 
 const linkClass =
-  "group flex rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2";
+  "group flex rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-100 dark:focus-visible:ring-offset-zinc-900";
 const imageClass = "object-cover transition duration-300 group-hover:scale-[1.02]";
 
 type TopicNewsGridProps = { section: TopicSection };
@@ -33,7 +33,7 @@ function CzechRepublicLayout({ section }: TopicNewsGridProps) {
   return (
     <ul className="list-none space-y-4 p-0 m-0 sm:space-y-6">
       {section.items.map((item, i) => (
-        <li key={item.id} className={i === 0 ? "border-b border-zinc-200 pb-4 sm:pb-6" : undefined}>
+        <li key={item.id} className={i === 0 ? "border-b border-zinc-200 pb-4 dark:border-zinc-700 sm:pb-6" : undefined}>
           <NewsBlockCard
             article={item}
             href={`#article-${item.id}`}
@@ -53,7 +53,7 @@ function SlovakiaLayout({ section }: TopicNewsGridProps) {
         <li key={item.id}>
           <ArticleLink href={`#article-${item.id}`} ariaLabel={`Read: ${item.title}`}>
             <article className="flex flex-col">
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm bg-zinc-100">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm bg-zinc-100 dark:bg-zinc-800">
                 <Image
                   src={item.imageUrl}
                   alt={item.imageAlt}
@@ -62,11 +62,11 @@ function SlovakiaLayout({ section }: TopicNewsGridProps) {
                   sizes="(min-width: 640px) 50vw, 100vw"
                 />
               </div>
-              <p className="mt-3 text-sm text-zinc-500">{formatMainStoriesDate(item.publishedAt)}</p>
-              <h3 className="mt-1 font-sans text-lg font-bold leading-snug text-zinc-900 group-hover:text-zinc-700">
+              <p className="mt-3 text-sm text-zinc-500 dark:text-zinc-400">{formatMainStoriesDate(item.publishedAt)}</p>
+              <h3 className="mt-1 font-sans text-lg font-bold leading-snug text-zinc-900 group-hover:text-zinc-700 dark:text-zinc-100 dark:group-hover:text-zinc-200">
                 {item.title}
               </h3>
-              <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-zinc-600">{item.dek}</p>
+              <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{item.dek}</p>
             </article>
           </ArticleLink>
         </li>
@@ -82,7 +82,7 @@ function HungaryLayout({ section }: TopicNewsGridProps) {
       {section.items.map((item) => (
         <li key={item.id}>
           <ArticleLink href={`#article-${item.id}`} ariaLabel={`Read: ${item.title}`} className="flex gap-4">
-            <div className="relative h-24 w-28 shrink-0 overflow-hidden rounded-sm bg-zinc-100 sm:h-28 sm:w-36">
+            <div className="relative h-24 w-28 shrink-0 overflow-hidden rounded-sm bg-zinc-100 dark:bg-zinc-800 sm:h-28 sm:w-36">
               <Image
                 src={item.imageUrl}
                 alt={item.imageAlt}
@@ -92,11 +92,11 @@ function HungaryLayout({ section }: TopicNewsGridProps) {
               />
             </div>
             <div className="min-w-0 flex-1 py-0.5">
-              <p className="text-xs text-zinc-500 sm:text-sm">{formatMainStoriesDate(item.publishedAt)}</p>
-              <h3 className="mt-1 font-sans text-base font-bold leading-snug text-zinc-900 group-hover:text-zinc-700 sm:text-lg">
+              <p className="text-xs text-zinc-500 dark:text-zinc-400 sm:text-sm">{formatMainStoriesDate(item.publishedAt)}</p>
+              <h3 className="mt-1 font-sans text-base font-bold leading-snug text-zinc-900 group-hover:text-zinc-700 dark:text-zinc-100 dark:group-hover:text-zinc-200 sm:text-lg">
                 {item.title}
               </h3>
-              <p className="mt-1 line-clamp-2 text-sm text-zinc-600">{item.dek}</p>
+              <p className="mt-1 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{item.dek}</p>
             </div>
           </ArticleLink>
         </li>
@@ -128,7 +128,7 @@ function GeorgiaLayout({ section }: TopicNewsGridProps) {
       <div className="lg:col-span-2">
         <ArticleLink href={`#article-${lead.id}`} ariaLabel={`Read: ${lead.title}`} className="h-full">
           <article className="flex h-full flex-col">
-            <div className="relative aspect-[2/1] w-full overflow-hidden rounded-sm bg-zinc-100">
+            <div className="relative aspect-[2/1] w-full overflow-hidden rounded-sm bg-zinc-100 dark:bg-zinc-800">
               <Image
                 src={lead.imageUrl}
                 alt={lead.imageAlt}
@@ -137,11 +137,11 @@ function GeorgiaLayout({ section }: TopicNewsGridProps) {
                 sizes="(min-width: 1024px) 75vw, (min-width: 640px) 100vw, 100vw"
               />
             </div>
-            <p className={`${spaceBlock} text-sm text-zinc-500`}>{formatMainStoriesDate(lead.publishedAt)}</p>
-            <h3 className={`${spaceBlock} font-sans text-xl font-bold leading-snug text-zinc-900 group-hover:text-zinc-700 sm:text-2xl`}>
+            <p className={`${spaceBlock} text-sm text-zinc-500 dark:text-zinc-400`}>{formatMainStoriesDate(lead.publishedAt)}</p>
+            <h3 className={`${spaceBlock} font-sans text-xl font-bold leading-snug text-zinc-900 group-hover:text-zinc-700 dark:text-zinc-100 dark:group-hover:text-zinc-200 sm:text-2xl`}>
               {lead.title}
             </h3>
-            <p className={`${spaceBlock} text-sm leading-relaxed text-zinc-600 sm:line-clamp-3`}>{lead.dek}</p>
+            <p className={`${spaceBlock} text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 sm:line-clamp-3`}>{lead.dek}</p>
           </article>
         </ArticleLink>
       </div>
@@ -150,7 +150,7 @@ function GeorgiaLayout({ section }: TopicNewsGridProps) {
           <li key={item.id} className="flex h-full min-h-0">
             <ArticleLink href={`#article-${item.id}`} ariaLabel={`Read: ${item.title}`} className="flex h-full min-h-0 w-full">
               <article className="flex h-full w-full flex-row items-start gap-4 text-left">
-                <div className="relative aspect-square h-20 w-20 shrink-0 overflow-hidden rounded-sm bg-zinc-100 sm:h-24 sm:w-24">
+                <div className="relative aspect-square h-20 w-20 shrink-0 overflow-hidden rounded-sm bg-zinc-100 dark:bg-zinc-800 sm:h-24 sm:w-24">
                   <Image
                     src={item.imageUrl}
                     alt={item.imageAlt}
@@ -160,11 +160,11 @@ function GeorgiaLayout({ section }: TopicNewsGridProps) {
                   />
                 </div>
                 <div className="flex min-w-0 flex-1 flex-col justify-start pt-0.5">
-                  <p className="text-xs text-zinc-500">{formatMainStoriesDate(item.publishedAt)}</p>
-                  <h3 className="mt-2 font-sans text-sm font-bold leading-snug text-zinc-900 group-hover:text-zinc-700 sm:text-base">
+                  <p className="text-xs text-zinc-500 dark:text-zinc-400">{formatMainStoriesDate(item.publishedAt)}</p>
+                  <h3 className="mt-2 font-sans text-sm font-bold leading-snug text-zinc-900 group-hover:text-zinc-700 dark:text-zinc-100 dark:group-hover:text-zinc-200 sm:text-base">
                     {item.title}
                   </h3>
-                  <p className="mt-2 line-clamp-2 text-sm text-zinc-600">{item.dek}</p>
+                  <p className="mt-2 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">{item.dek}</p>
                 </div>
               </article>
             </ArticleLink>

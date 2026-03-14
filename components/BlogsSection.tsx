@@ -49,11 +49,11 @@ export function BlogsSection() {
         {BLOGS.map((blog) => (
           <li key={blog.id}>
             <article
-              className="flex h-full flex-col items-center rounded-xl bg-zinc-100 p-5 text-center transition hover:bg-zinc-200/80 sm:p-6"
+              className="flex h-full flex-col items-center rounded-xl bg-zinc-100 p-5 text-center transition hover:bg-zinc-200/80 dark:bg-zinc-800 dark:hover:bg-zinc-700/80 sm:p-6"
               aria-labelledby={`blog-title-${blog.id}`}
             >
               <div className="mb-4 sm:mb-5">
-                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full bg-zinc-200 ring-2 ring-zinc-300 sm:h-24 sm:w-24">
+                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full bg-zinc-200 ring-2 ring-zinc-300 dark:bg-zinc-600 dark:ring-zinc-500 sm:h-24 sm:w-24">
                   <Image
                     src={blog.imageUrl}
                     alt={blog.imageAlt}
@@ -63,25 +63,25 @@ export function BlogsSection() {
                   />
                 </div>
               </div>
-              <p className="mb-1 text-xs font-medium text-zinc-700">
+              <p className="mb-1 text-xs font-medium text-zinc-700 dark:text-zinc-300">
                 {blog.authorName}
               </p>
-              <p className="mb-2 text-xs text-zinc-500">
+              <p className="mb-2 text-xs text-zinc-500 dark:text-zinc-400">
                 {blog.authorRole}
               </p>
               <time
                 dateTime={blog.dateTime}
-                className="mb-1.5 text-xs font-medium uppercase tracking-wider text-zinc-500"
+                className="mb-1.5 text-xs font-medium uppercase tracking-wider text-zinc-500 dark:text-zinc-400"
               >
                 {blog.date}
               </time>
               <h3
                 id={`blog-title-${blog.id}`}
-                className="font-sans text-base font-bold leading-snug text-zinc-900 sm:text-lg"
+                className="font-sans text-base font-bold leading-snug text-zinc-900 dark:text-zinc-100 sm:text-lg"
               >
                 {blog.title}
               </h3>
-              <p className="mt-2 text-sm leading-snug text-zinc-600">
+              <p className="mt-2 text-sm leading-snug text-zinc-600 dark:text-zinc-400">
                 {blog.description}
               </p>
             </article>

@@ -20,22 +20,22 @@ export function Footer() {
   return (
     <footer
       role="contentinfo"
-      className="border-t border-zinc-200 mt-auto"
+      className="mt-auto border-t border-zinc-200 dark:border-zinc-700"
       aria-label="Site footer"
     >
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <p className="font-sans text-xl font-bold tracking-tight text-zinc-900">
+            <p className="font-sans text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
               Prisma<span className="font-normal">Media</span>
             </p>
-            <p className="mt-2 max-w-sm text-sm text-zinc-500">
+            <p className="mt-2 max-w-sm text-sm text-zinc-500 dark:text-zinc-400">
               Political and policy coverage from Central and Eastern Europe.
             </p>
           </div>
           <div className="flex flex-col gap-6 sm:flex-row sm:gap-12">
             <nav aria-label="Footer regions">
-<h3 className="font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
+<h3 className="font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400 dark:text-zinc-500">
               Regions
               </h3>
               <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
@@ -43,7 +43,7 @@ export function Footer() {
                   <li key={label}>
                     <a
                       href={href}
-                      className="text-sm text-zinc-600 hover:text-zinc-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 rounded"
+                      className="rounded text-sm text-zinc-600 hover:text-zinc-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 dark:text-zinc-400 dark:hover:text-zinc-100 dark:focus-visible:ring-zinc-100 dark:focus-visible:ring-offset-zinc-900"
                     >
                       {label}
                     </a>
@@ -52,7 +52,7 @@ export function Footer() {
               </ul>
             </nav>
             <nav aria-label="Footer legal and info">
-<h3 className="font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400">
+<h3 className="font-sans text-[11px] font-bold uppercase tracking-[0.18em] text-zinc-400 dark:text-zinc-500">
               Legal
               </h3>
               <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
@@ -60,7 +60,7 @@ export function Footer() {
                   <li key={label}>
                     <a
                       href={href}
-                      className="text-sm text-zinc-600 hover:text-zinc-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 rounded"
+                      className="rounded text-sm text-zinc-600 hover:text-zinc-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 dark:text-zinc-400 dark:hover:text-zinc-100 dark:focus-visible:ring-zinc-100 dark:focus-visible:ring-offset-zinc-900"
                     >
                       {label}
                     </a>
@@ -70,8 +70,8 @@ export function Footer() {
             </nav>
           </div>
         </div>
-        <div className="mt-10 pt-6 border-t border-zinc-100">
-          <p className="text-xs text-zinc-500">
+        <div className="mt-10 border-t border-zinc-100 pt-6 dark:border-zinc-700">
+          <p className="text-xs text-zinc-500 dark:text-zinc-400">
             © {currentYear} PrismaMedia. All rights reserved.
           </p>
         </div>

@@ -33,7 +33,7 @@ function TickerContent() {
 export function NewsTicker() {
   return (
     <section
-      className="relative overflow-hidden border-y border-zinc-200/80 bg-zinc-900 py-2.5"
+      className="relative overflow-hidden border-y border-zinc-200/80 bg-zinc-900 py-2.5 dark:border-zinc-700"
       aria-label="Breaking news ticker"
     >
       <div className="absolute left-0 top-0 z-10 h-full w-16 shrink-0 bg-gradient-to-r from-zinc-900 to-transparent" />

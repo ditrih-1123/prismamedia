@@ -37,7 +37,7 @@ export function NewsSidebar() {
   return (
     <aside
       aria-label="Latest headlines"
-      className="w-full shrink-0 border-t border-zinc-200 pt-6 lg:border-t-0 lg:pt-0 lg:sticky lg:top-24"
+      className="w-full shrink-0 border-t border-zinc-200 pt-6 dark:border-zinc-700 lg:border-t-0 lg:pt-0 lg:sticky lg:top-24"
     >
       <div className="px-4 sm:px-6 lg:px-8">
         <SectionHeader title="Latest" />
@@ -47,20 +47,20 @@ export function NewsSidebar() {
           <li key={item.id}>
             <a
               href={`#article-${item.id}`}
-              className="group block min-h-[2.75rem] rounded-lg py-2 transition-colors hover:bg-zinc-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 sm:min-h-0 sm:py-1.5 lg:py-1"
+              className="group block min-h-[2.75rem] rounded-lg py-2 transition-colors hover:bg-zinc-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 dark:hover:bg-zinc-800 dark:focus-visible:ring-zinc-100 dark:focus-visible:ring-offset-zinc-900 sm:min-h-0 sm:py-1.5 lg:py-1"
               aria-label={`Read: ${item.title}`}
             >
               <article>
-                <p className="flex flex-wrap items-center gap-2 text-xs text-zinc-500 sm:text-sm">
+                <p className="flex flex-wrap items-center gap-2 text-xs text-zinc-500 sm:text-sm dark:text-zinc-400">
                   {item.isHighlight && (
-                    <span className="rounded bg-zinc-200 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-700">
+                    <span className="rounded bg-zinc-200 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-700 dark:bg-zinc-600 dark:text-zinc-200">
                       Important
                     </span>
                   )}
                   {formatMainStoriesDate(item.publishedAt)}
                 </p>
                 <h3
-                  className={`mt-1.5 line-clamp-2 font-sans text-sm leading-snug text-zinc-900 group-hover:text-zinc-700 sm:mt-2 ${
+                  className={`mt-1.5 line-clamp-2 font-sans text-sm leading-snug text-zinc-900 group-hover:text-zinc-700 dark:text-zinc-100 dark:group-hover:text-zinc-200 sm:mt-2 ${
                     item.isHighlight ? "font-bold" : "font-normal"
                   }`}
                 >
@@ -79,20 +79,20 @@ export function NewsSidebar() {
           <li key={item.id}>
             <a
               href={`#article-${item.id}`}
-              className="group block min-h-[2.75rem] rounded-lg py-2 transition-colors hover:bg-zinc-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 sm:min-h-0 sm:py-1.5 lg:py-1"
+              className="group block min-h-[2.75rem] rounded-lg py-2 transition-colors hover:bg-zinc-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 dark:hover:bg-zinc-800 dark:focus-visible:ring-zinc-100 dark:focus-visible:ring-offset-zinc-900 sm:min-h-0 sm:py-1.5 lg:py-1"
               aria-label={`Read: ${item.title}`}
             >
               <article>
-                <p className="flex flex-wrap items-center gap-2 text-xs text-zinc-500 sm:text-sm">
+                <p className="flex flex-wrap items-center gap-2 text-xs text-zinc-500 sm:text-sm dark:text-zinc-400">
                   {item.isHighlight && (
-                    <span className="rounded bg-zinc-200 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-700">
+                    <span className="rounded bg-zinc-200 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zinc-700 dark:bg-zinc-600 dark:text-zinc-200">
                       Important
                     </span>
                   )}
                   {formatMainStoriesDate(item.publishedAt)}
                 </p>
                 <h3
-                  className={`mt-1.5 line-clamp-2 font-sans text-sm leading-snug text-zinc-900 group-hover:text-zinc-700 sm:mt-2 ${
+                  className={`mt-1.5 line-clamp-2 font-sans text-sm leading-snug text-zinc-900 group-hover:text-zinc-700 dark:text-zinc-100 dark:group-hover:text-zinc-200 sm:mt-2 ${
                     item.isHighlight ? "font-bold" : "font-normal"
                   }`}
                 >
@@ -106,7 +106,7 @@ export function NewsSidebar() {
       <div className="px-4 pt-2 pb-4 sm:px-6 lg:px-8">
         <a
           href="#"
-          className="inline-flex w-full items-center justify-center rounded-lg bg-amber-500 px-4 py-2.5 text-sm font-semibold text-zinc-900 transition hover:bg-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2"
+          className="inline-flex w-full items-center justify-center rounded-lg bg-amber-500 px-4 py-2.5 text-sm font-semibold text-zinc-900 transition hover:bg-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-900"
         >
           View all news
         </a>

@@ -31,13 +31,13 @@ const fullWidthSections = topicSections.slice(3);
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-white text-zinc-900">
+    <div className="flex min-h-screen flex-col bg-white text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100">
       <Header />
 
       <NewsTicker />
       <section
         aria-label="Editorial categories"
-        className="bg-white"
+        className="bg-white dark:bg-zinc-900"
       >
         <div className={`mx-auto flex max-w-6xl gap-3 overflow-x-auto ${sectionPadding} sm:gap-4 ${contentPadding}`}>
           {[
@@ -50,12 +50,12 @@ export default function Home() {
             <button
               key={category.label}
               type="button"
-              className="group flex min-w-[8.5rem] items-center justify-between rounded-2xl border border-zinc-200 px-3.5 py-2.5 text-sm font-medium text-zinc-900 transition hover:border-zinc-300 hover:bg-zinc-50 sm:min-w-[9rem] sm:px-4"
+              className="group flex min-w-[8.5rem] items-center justify-between rounded-2xl border border-zinc-200 px-3.5 py-2.5 text-sm font-medium text-zinc-900 transition hover:border-zinc-300 hover:bg-zinc-50 dark:border-zinc-600 dark:text-zinc-100 dark:hover:border-zinc-500 dark:hover:bg-zinc-800 sm:min-w-[9rem] sm:px-4"
             >
               <span className="text-[13px] tracking-tight">
                 {category.label}
               </span>
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-zinc-50 text-base text-zinc-700 transition group-hover:bg-zinc-100">
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-zinc-50 text-base text-zinc-700 transition group-hover:bg-zinc-100 dark:bg-zinc-800 dark:text-zinc-300 dark:group-hover:bg-zinc-700">
                 <category.Icon size={18} weight="bold" />
               </span>
             </button>

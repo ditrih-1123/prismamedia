@@ -48,12 +48,12 @@ const PM_DATA = [
 
 export function TrustInPrimeMinisters() {
   return (
-    <div className="min-w-0 rounded-xl border border-zinc-200 bg-zinc-50/50 px-3 py-4 sm:px-4 sm:py-5">
+    <div className="min-w-0 rounded-xl border border-zinc-200 bg-zinc-50/50 px-3 py-4 dark:border-zinc-600 dark:bg-zinc-800/60 sm:px-4 sm:py-5">
       <header className="mb-4 space-y-0.5">
-        <h3 className="font-sans text-base font-bold tracking-tight text-zinc-900">
+        <h3 className="font-sans text-base font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
           Trust in prime ministers
         </h3>
-        <p className="text-xs text-zinc-600">
+        <p className="text-xs text-zinc-600 dark:text-zinc-400">
           Share who trust vs. distrust (%), latest national polls.
         </p>
       </header>
@@ -62,7 +62,7 @@ export function TrustInPrimeMinisters() {
           const rest = 100 - pm.trust - pm.distrust;
           return (
             <div key={pm.country} className="flex gap-2.5">
-              <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full bg-zinc-200 ring-1 ring-zinc-300">
+              <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full bg-zinc-200 ring-1 ring-zinc-300 dark:bg-zinc-600 dark:ring-zinc-500">
                 <Image
                   src={pm.imageUrl}
                   alt=""
@@ -72,12 +72,12 @@ export function TrustInPrimeMinisters() {
                 />
               </div>
               <div className="min-w-0 flex-1 overflow-visible">
-                <p className="text-sm font-semibold leading-tight text-zinc-900">
-                  {pm.name}
+<p className="text-sm font-semibold leading-tight text-zinc-900 dark:text-zinc-100">
+                {pm.name}
                 </p>
-                <p className="text-xs text-zinc-600">{pm.country}</p>
+                <p className="text-xs text-zinc-600 dark:text-zinc-400">{pm.country}</p>
                 <div className="mt-1.5 flex items-center gap-2">
-                  <div className="relative h-2.5 min-w-[80px] flex-1 overflow-hidden rounded-full bg-zinc-200">
+                  <div className="relative h-2.5 min-w-[80px] flex-1 overflow-hidden rounded-full bg-zinc-200 dark:bg-zinc-600">
                     <div
                       className="absolute inset-y-0 left-0 rounded-l-full bg-emerald-500"
                       style={{ width: `${pm.trust}%` }}
@@ -90,7 +90,7 @@ export function TrustInPrimeMinisters() {
                     />
                     {rest > 0 && (
                       <div
-                        className="absolute inset-y-0 rounded-r-full bg-zinc-300"
+                        className="absolute inset-y-0 rounded-r-full bg-zinc-300 dark:bg-zinc-500"
                         style={{
                           left: `${pm.trust + pm.distrust}%`,
                           width: `${rest}%`,
@@ -100,9 +100,9 @@ export function TrustInPrimeMinisters() {
                     )}
                   </div>
                   <div className="w-11 shrink-0 text-right text-xs font-medium">
-                    <span className="text-emerald-700">{pm.trust}</span>
-                    <span className="text-zinc-500">/</span>
-                    <span className="text-red-600">{pm.distrust}</span>
+                    <span className="text-emerald-700 dark:text-emerald-400">{pm.trust}</span>
+                    <span className="text-zinc-500 dark:text-zinc-400">/</span>
+                    <span className="text-red-600 dark:text-red-400">{pm.distrust}</span>
                   </div>
                 </div>
               </div>
@@ -110,7 +110,7 @@ export function TrustInPrimeMinisters() {
           );
         })}
       </div>
-      <p className="mt-3 border-t border-zinc-200 pt-3 text-xs text-zinc-600">
+      <p className="mt-3 border-t border-zinc-200 pt-3 text-xs text-zinc-600 dark:border-zinc-600 dark:text-zinc-400">
         Sources: Eurobarometer, national pollsters (Median, Focus, etc.), 2024–2025.
       </p>
     </div>
