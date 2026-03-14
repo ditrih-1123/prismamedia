@@ -28,6 +28,11 @@ const sidebarItems: SidebarItem[] = rawItems.map((item, index) => ({
   isHighlight: index % 4 === 0,
 }));
 
+/** Limit so Latest block height aligns with the Hungary news block in the main column */
+const SIDEBAR_ITEMS_LIMIT = 8;
+const limitedItems = sidebarItems.slice(0, SIDEBAR_ITEMS_LIMIT);
+const firstHalfCount = Math.ceil(limitedItems.length / 2);
+
 export function NewsSidebar() {
   return (
     <aside
@@ -38,7 +43,7 @@ export function NewsSidebar() {
         <SectionHeader title="Latest" />
       </div>
       <ul className="space-y-4 px-4 py-3 sm:space-y-5 sm:px-6 lg:space-y-6 lg:px-8">
-        {sidebarItems.slice(0, Math.ceil(sidebarItems.length / 2)).map((item) => (
+        {limitedItems.slice(0, firstHalfCount).map((item) => (
           <li key={item.id}>
             <a
               href={`#article-${item.id}`}
@@ -70,7 +75,7 @@ export function NewsSidebar() {
         <TrustInPrimeMinisters />
       </div>
       <ul className="space-y-4 px-4 py-3 sm:space-y-5 sm:px-6 lg:space-y-6 lg:px-8">
-        {sidebarItems.slice(Math.ceil(sidebarItems.length / 2)).map((item) => (
+        {limitedItems.slice(firstHalfCount).map((item) => (
           <li key={item.id}>
             <a
               href={`#article-${item.id}`}
