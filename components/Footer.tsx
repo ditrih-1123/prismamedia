@@ -30,7 +30,7 @@ export function Footer() {
               Prisma<span className="font-normal">Media</span>
             </p>
             <p className="mt-2 max-w-sm text-sm text-zinc-500 dark:text-zinc-400">
-              Political and policy coverage from Central and Eastern Europe.
+              News, polls, and in-depth reporting on politics and policy in Central and Eastern Europe.
             </p>
           </div>
           <div className="flex flex-col gap-6 sm:flex-row sm:gap-12">
