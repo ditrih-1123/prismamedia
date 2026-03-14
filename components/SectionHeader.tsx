@@ -12,7 +12,7 @@ export function SectionHeader({ title, id, className = "" }: SectionHeaderProps)
         className="flex items-center gap-3 font-sans text-xl font-bold uppercase tracking-tight text-zinc-900"
       >
         <span
-          className="h-2 w-2 shrink-0 rounded-sm bg-red-500"
+          className="h-2 w-2 shrink-0 rounded-sm bg-amber-500"
           aria-hidden
         />
         {title}
