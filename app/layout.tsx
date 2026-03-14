@@ -21,11 +21,20 @@ export const metadata: Metadata = {
 
 const themeScript = `
 (function() {
-  const key = 'theme';
-  const stored = localStorage.getItem(key);
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (stored === 'dark' || (!stored && prefersDark)) document.documentElement.classList.add('dark');
-  else document.documentElement.classList.remove('dark');
+  var key = 'theme';
+  var q = document.location.search;
+  if (q.indexOf('theme=dark') !== -1) {
+    document.documentElement.classList.add('dark');
+    try { localStorage.setItem(key, 'dark'); } catch (e) {}
+  } else if (q.indexOf('theme=light') !== -1) {
+    document.documentElement.classList.remove('dark');
+    try { localStorage.setItem(key, 'light'); } catch (e) {}
+  } else {
+    var stored = localStorage.getItem(key);
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (stored === 'dark' || (!stored && prefersDark)) document.documentElement.classList.add('dark');
+    else document.documentElement.classList.remove('dark');
+  }
 })();
 `;
 
