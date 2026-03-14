@@ -6,7 +6,7 @@ export function HungaryElectionsPromo() {
   return (
     <section
       aria-label="Hungary elections special project"
-      className="flex flex-col overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50/50 lg:flex-row lg:items-stretch"
+      className="flex flex-col overflow-hidden rounded-lg border border-zinc-200 bg-zinc-200/80 lg:flex-row lg:items-stretch"
     >
       <div className="flex flex-1 flex-col justify-center px-4 py-4 sm:px-5 sm:py-5 lg:px-6 lg:py-5">
         <h2 className="font-sans text-base font-bold leading-tight tracking-tight text-zinc-900 sm:text-lg">
@@ -23,7 +23,7 @@ export function HungaryElectionsPromo() {
         </a>
       </div>
       <div className="relative flex shrink-0 items-end lg:w-[22rem]">
-        <div className="relative h-44 w-full sm:h-52 lg:h-60 lg:w-[20rem] lg:min-w-[20rem]">
+        <div className="relative h-44 w-full min-h-[11rem] sm:h-52 lg:h-60 lg:min-h-[15rem] lg:w-[20rem] lg:min-w-[20rem]">
           <Image
             src={HUNGARY_IMAGE}
             alt="Hungary elections"

@@ -35,6 +35,7 @@ export default function Home() {
       <Header />
 
       <NewsTicker />
+      <HungaryPollsChart />
       <section
         aria-label="Editorial categories"
         className="bg-white"
@@ -63,7 +64,6 @@ export default function Home() {
         </div>
       </section>
       <MainNewsBlock />
-      <HungaryPollsChart />
 
       <main className={`mx-auto flex flex-1 max-w-6xl flex-col ${blockGap} ${sectionPadding} lg:flex-row lg:items-start ${contentPadding}`}>
         <div className={`flex-1 ${blockSpaceY}`}>
