@@ -29,7 +29,7 @@ const sidebarItems: SidebarItem[] = rawItems.map((item, index) => ({
 }));
 
 /** Limit so Latest block height aligns with the Hungary news block in the main column */
-const SIDEBAR_ITEMS_LIMIT = 8;
+const SIDEBAR_ITEMS_LIMIT = 14;
 const limitedItems = sidebarItems.slice(0, SIDEBAR_ITEMS_LIMIT);
 const firstHalfCount = Math.ceil(limitedItems.length / 2);
 
@@ -103,6 +103,14 @@ export function NewsSidebar() {
           </li>
         ))}
       </ul>
+      <div className="px-4 pt-2 pb-4 sm:px-6 lg:px-8">
+        <a
+          href="#"
+          className="inline-flex w-full items-center justify-center rounded-lg bg-amber-500 px-4 py-2.5 text-sm font-semibold text-zinc-900 transition hover:bg-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2"
+        >
+          View all news
+        </a>
+      </div>
     </aside>
   );
 }
