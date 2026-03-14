@@ -6,30 +6,33 @@ export function HungaryElectionsPromo() {
   return (
     <section
       aria-label="Hungary elections special project"
-      className="flex flex-col overflow-hidden rounded-lg border border-zinc-200 bg-zinc-200/80 lg:flex-row lg:items-stretch"
+      className="relative flex flex-col overflow-hidden rounded-2xl bg-zinc-200/80 text-zinc-900 shadow-lg lg:flex-row lg:items-stretch"
     >
-      <div className="flex flex-1 flex-col justify-center px-4 py-4 sm:px-5 sm:py-5 lg:px-6 lg:py-5">
-        <h2 className="font-sans text-base font-bold leading-tight tracking-tight text-zinc-900 sm:text-lg">
+      <div className="relative z-10 flex flex-1 flex-col justify-center px-5 py-6 sm:px-8 sm:py-8">
+        <span className="text-xs font-semibold uppercase tracking-widest text-amber-600">
+          Special project
+        </span>
+        <h2 className="mt-2 font-sans text-xl font-bold leading-tight tracking-tight sm:text-2xl">
           Who will win the elections in Hungary?
         </h2>
-        <p className="mt-1.5 text-sm leading-snug text-zinc-600">
+        <p className="mt-3 max-w-xl text-sm leading-relaxed text-zinc-600">
           Follow our special project for analysis, polls and live coverage.
         </p>
         <a
           href="#hungary"
-          className="mt-4 inline-flex w-fit rounded-full border border-zinc-900 bg-zinc-900 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-white transition hover:bg-zinc-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
+          className="mt-5 inline-flex w-fit items-center rounded-lg bg-amber-500 px-4 py-2.5 text-sm font-semibold text-zinc-900 transition hover:bg-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-200"
         >
-          Go to special project
+          Read the coverage
         </a>
       </div>
-      <div className="relative flex shrink-0 items-end lg:w-[22rem]">
-        <div className="relative h-44 w-full min-h-[11rem] sm:h-52 lg:h-60 lg:min-h-[15rem] lg:w-[20rem] lg:min-w-[20rem]">
+      <div className="relative z-10 flex shrink-0 items-end lg:w-72">
+        <div className="relative h-40 w-full min-h-[10rem] sm:h-48 lg:h-52 lg:min-h-[13rem]">
           <Image
             src={HUNGARY_IMAGE}
             alt="Hungary elections"
             fill
-            className="object-contain object-bottom"
-            sizes="(min-width: 1024px) 320px, 100vw"
+            className="object-contain object-bottom drop-shadow-xl"
+            sizes="(min-width: 1024px) 288px, (min-width: 640px) 256px, 224px"
             priority={false}
           />
         </div>
