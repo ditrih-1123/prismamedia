@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { List, X } from "@phosphor-icons/react";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { CURRENCIES, fetchRates } from "@/lib/currencies";
 
 const navLinks = [
   { label: "Czech", href: "#czech-republic" },
@@ -15,7 +16,23 @@ const navLinks = [
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [rates, setRates] = useState<Record<string, number> | null>(null);
+  const [ratesError, setRatesError] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchRates()
+      .then((r) => {
+        if (!cancelled) setRates(r);
+      })
+      .catch(() => {
+        if (!cancelled) setRatesError(true);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -42,6 +59,35 @@ export function Header() {
 
   return (
     <header className="relative border-b border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-900" ref={menuRef}>
+      {/* Currency rates: 1 USD per national currency */}
+      <div
+        className="border-b border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-800/80"
+        aria-label="Exchange rates per 1 USD"
+      >
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-4 gap-y-1 px-4 py-2 text-center text-xs text-zinc-600 dark:text-zinc-400 sm:justify-start sm:gap-x-5 sm:py-2.5 sm:px-6 lg:px-8">
+          <span className="font-medium text-zinc-500 dark:text-zinc-500">1 USD</span>
+          {ratesError && (
+            <span className="text-amber-600 dark:text-amber-500">Rates unavailable</span>
+          )}
+          {!ratesError && !rates && (
+            <span className="animate-pulse">Loading rates…</span>
+          )}
+          {!ratesError && rates && (
+            <>
+              {CURRENCIES.map(({ code, symbol }) => {
+                const rate = rates[code];
+                if (rate == null) return null;
+                const value = code === "AMD" || code === "HUF" ? Math.round(rate) : rate.toFixed(2);
+                return (
+                  <span key={code} className="whitespace-nowrap">
+                    {symbol} {value}
+                  </span>
+                );
+              })}
+            </>
+          )}
+        </div>
+      </div>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <a href="#" className="font-sans text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-2xl">
           Prisma<span className="font-normal">Media</span>

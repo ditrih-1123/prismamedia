@@ -1,6 +1,7 @@
 import { topicSections } from "@/lib/news";
 import { formatMainStoriesDate } from "@/lib/dateUtils";
 import { SectionHeader } from "@/components/SectionHeader";
+import { LatestDigest } from "@/components/LatestDigest";
 import { TrustInPrimeMinisters } from "@/components/TrustInPrimeMinisters";
 
 type SidebarItem = {
@@ -110,6 +111,9 @@ export function NewsSidebar() {
         >
           View all news
         </a>
+      </div>
+      <div className="px-4 pt-2 pb-4 sm:px-6 lg:px-8">
+        <LatestDigest />
       </div>
     </aside>
   );
