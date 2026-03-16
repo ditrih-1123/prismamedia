@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeSync } from "@/components/ThemeSync";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,19 +22,11 @@ export const metadata: Metadata = {
 
 const themeScript = `
 (function() {
-  var key = 'theme';
-  var q = document.location.search;
-  if (q.indexOf('theme=dark') !== -1) {
+  var path = document.location.pathname;
+  if (path === '/dark' || path.indexOf('/dark/') === 0) {
     document.documentElement.classList.add('dark');
-    try { localStorage.setItem(key, 'dark'); } catch (e) {}
-  } else if (q.indexOf('theme=light') !== -1) {
-    document.documentElement.classList.remove('dark');
-    try { localStorage.setItem(key, 'light'); } catch (e) {}
   } else {
-    var stored = localStorage.getItem(key);
-    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (stored === 'dark' || (!stored && prefersDark)) document.documentElement.classList.add('dark');
-    else document.documentElement.classList.remove('dark');
+    document.documentElement.classList.remove('dark');
   }
 })();
 `;
@@ -51,6 +44,7 @@ export default function RootLayout({
         <Script id="theme-init" strategy="beforeInteractive">
           {themeScript}
         </Script>
+        <ThemeSync />
         {children}
       </body>
     </html>

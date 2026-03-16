@@ -1,0 +1,285 @@
+[
+  {
+    "id": "czech-republic",
+    "label": "Czech Republic",
+    "description": "Politics, power brokers and the new face of Central Europe.",
+    "items": [
+      {
+        "id": "cz1",
+        "title": "Prague’s Power Brokers And The New Politics Of Central Europe",
+        "dek": "How the Czech Republic is navigating populism, prosperity and pressure from both East and West.",
+        "body": "How the Czech Republic is navigating populism, prosperity and pressure from both East and West. Prague is redefining its role in European politics while balancing domestic reform with EU and NATO commitments.",
+        "imageUrl": "/images/1.jpg",
+        "imageAlt": "Prague political meeting, two men shaking hands outdoors.",
+        "category": "Politics",
+        "dateline": "Prague",
+        "publishedAt": "Mar 13, 2025 · 16:29"
+      },
+      {
+        "id": "cz2",
+        "title": "Czech Government Faces Backlash Over Pension and Tax Reforms",
+        "dek": "Coalition partners clash as public support slips and opposition gains ground.",
+        "imageUrl": "/images/2.jpg",
+        "imageAlt": "Czech government and reform.",
+        "category": "Reform",
+        "dateline": "Prague",
+        "publishedAt": "Mar 12, 2025 · 14:15"
+      },
+      {
+        "id": "cz3",
+        "title": "EU Presidency Looms as Czechs Weigh Stance on Ukraine and Energy",
+        "dek": "Prague seeks to balance Atlantic solidarity with domestic energy and cost-of-living concerns.",
+        "imageUrl": "/images/3.jpg",
+        "imageAlt": "EU presidency and Czech stance on Ukraine and energy.",
+        "category": "EU",
+        "dateline": "Prague",
+        "publishedAt": "Mar 11, 2025 · 10:42"
+      },
+      {
+        "id": "cz4",
+        "title": "Czech Opposition Rallies Ahead of Key Regional and Senate Votes",
+        "dek": "Local elections are seen as a bellwether for the next general poll.",
+        "imageUrl": "/images/4.jpg",
+        "imageAlt": "Czech opposition and regional elections.",
+        "category": "Elections",
+        "dateline": "Brno",
+        "publishedAt": "Mar 10, 2025 · 09:00"
+      }
+    ]
+  },
+  {
+    "id": "slovakia",
+    "label": "Slovakia",
+    "description": "Polarized politics, Eurozone stakes and the Russia question.",
+    "items": [
+      {
+        "id": "sk1",
+        "title": "Slovakia’s Polarized Politics And The High Stakes For The Eurozone",
+        "dek": "A deeply divided electorate is testing the country’s institutions—and Europe’s unity on Russia.",
+        "imageUrl": "/images/5.jpg",
+        "imageAlt": "Bratislava old town with castle at sunset.",
+        "category": "Politics",
+        "dateline": "Bratislava",
+        "publishedAt": "Mar 13, 2025 · 16:43"
+      },
+      {
+        "id": "sk2",
+        "title": "Bratislava Recalibrates Foreign Policy Amid Coalition Tensions",
+        "dek": "The government walks a fine line between EU commitments and domestic populist pressure.",
+        "imageUrl": "/images/6.jpg",
+        "imageAlt": "Bratislava government district.",
+        "category": "Foreign Policy",
+        "dateline": "Bratislava",
+        "publishedAt": "Mar 12, 2025 · 11:20"
+      },
+      {
+        "id": "sk3",
+        "title": "Slovak Judiciary and Media Reforms Draw Brussels Scrutiny",
+        "dek": "EU rule-of-law mechanisms are again in focus as reforms advance.",
+        "imageUrl": "/images/7.jpg",
+        "imageAlt": "Courts and institutions.",
+        "category": "Rule of Law",
+        "dateline": "Bratislava",
+        "publishedAt": "Mar 11, 2025 · 15:00"
+      },
+      {
+        "id": "sk4",
+        "title": "Energy and Defence Deals Put Slovakia at Center of EU Debate",
+        "dek": "Nuclear, gas and military spending decisions ripple through the bloc.",
+        "imageUrl": "/images/8.jpg",
+        "imageAlt": "Energy and industry.",
+        "category": "Security",
+        "dateline": "Bratislava",
+        "publishedAt": "Mar 10, 2025 · 08:30"
+      }
+    ]
+  },
+  {
+    "id": "hungary",
+    "label": "Hungary",
+    "description": "Budapest, Brussels and the battle over Hungary’s political future.",
+    "items": [
+      {
+        "id": "hu1",
+        "title": "Power, Brussels And The Battle Over Hungary’s Political Future",
+        "dek": "Inside the tug-of-war between Budapest and Brussels that is reshaping Eastern Europe’s balance of power.",
+        "imageUrl": "/images/9.jpg",
+        "imageAlt": "Hungarian Parliament Building at dusk by the river.",
+        "category": "Politics",
+        "dateline": "Budapest",
+        "publishedAt": "Mar 13, 2025 · 12:18"
+      },
+      {
+        "id": "hu2",
+        "title": "EU Funds Remain Frozen as Hungary and Commission Spar Over Reforms",
+        "dek": "Rule-of-law conditionality keeps billions in cohesion and recovery cash on hold.",
+        "imageUrl": "/images/10.jpg",
+        "imageAlt": "EU and Hungarian flags.",
+        "category": "EU",
+        "dateline": "Budapest",
+        "publishedAt": "Mar 12, 2025 · 17:45"
+      },
+      {
+        "id": "hu3",
+        "title": "Orbán’s Opposition Unites Ahead of Critical Elections",
+        "dek": "A broad coalition is trying to turn local and European gains into national power.",
+        "imageUrl": "/images/11.jpg",
+        "imageAlt": "Election rally in Hungary.",
+        "category": "Elections",
+        "dateline": "Budapest",
+        "publishedAt": "Mar 11, 2025 · 09:22"
+      },
+      {
+        "id": "hu4",
+        "title": "Hungary’s Stance on Ukraine and Russia Splits NATO and EU Allies",
+        "dek": "Budapest’s vetoes and rhetoric continue to test Western unity.",
+        "imageUrl": "/images/12.jpg",
+        "imageAlt": "Diplomacy and summits.",
+        "category": "Foreign Policy",
+        "dateline": "Budapest",
+        "publishedAt": "Mar 10, 2025 · 14:00"
+      }
+    ]
+  },
+  {
+    "id": "moldova",
+    "label": "Moldova",
+    "description": "Reformers, oligarchs and the race for the EU dream.",
+    "items": [
+      {
+        "id": "md1",
+        "title": "Moldova’s Quiet Revolution: Reformers, Oligarchs And The EU Dream",
+        "dek": "Chisinau’s pro‑European government races against time to lock in reforms and fend off Russian influence.",
+        "imageUrl": "/images/13.jpg",
+        "imageAlt": "Cityscape with government buildings and national flag.",
+        "category": "Politics",
+        "dateline": "Chisinau",
+        "publishedAt": "Mar 13, 2025 · 10:45"
+      },
+      {
+        "id": "md2",
+        "title": "Chisinau Pushes Judiciary and Anti-Corruption Overhaul for EU Path",
+        "dek": "Reform milestones are key to unlocking membership talks and financial support.",
+        "imageUrl": "/images/14.png",
+        "imageAlt": "Moldovan institutions.",
+        "category": "Reform",
+        "dateline": "Chisinau",
+        "publishedAt": "Mar 12, 2025 · 13:30"
+      },
+      {
+        "id": "md3",
+        "title": "Transnistria and Gagauzia Keep Moldova’s Unity in Question",
+        "dek": "Frozen conflict and autonomy disputes complicate the country’s European orientation.",
+        "imageUrl": "/images/15.jpg",
+        "imageAlt": "Map and borders.",
+        "category": "Territory",
+        "dateline": "Chisinau",
+        "publishedAt": "Mar 11, 2025 · 16:00"
+      },
+      {
+        "id": "md4",
+        "title": "Moldova’s Energy and Security Ties With Romania and EU Deepen",
+        "dek": "Gas, electricity and defence cooperation are reducing dependence on Russia.",
+        "imageUrl": "/images/16.png",
+        "imageAlt": "Energy infrastructure.",
+        "category": "Security",
+        "dateline": "Chisinau",
+        "publishedAt": "Mar 10, 2025 · 11:15"
+      }
+    ]
+  },
+  {
+    "id": "georgia",
+    "label": "Georgia",
+    "description": "Street protests, European path and the choice between Moscow and Brussels.",
+    "items": [
+      {
+        "id": "ge1",
+        "title": "Georgia’s Street Protests And The Fight To Stay On A European Path",
+        "dek": "As crowds fill Tbilisi’s avenues, the country’s leaders are forced to choose between Moscow and Brussels.",
+        "imageUrl": "/images/17.jpg",
+        "imageAlt": "Crowd of people protesting in a city street.",
+        "category": "Politics",
+        "dateline": "Tbilisi",
+        "publishedAt": "Mar 13, 2025 · 08:20"
+      },
+      {
+        "id": "ge2",
+        "title": "Tbilisi’s Foreign Agents Law Draws Condemnation From EU and US",
+        "dek": "The controversial bill threatens to derail Georgia’s candidate status and Western support.",
+        "imageUrl": "/images/18.jpg",
+        "imageAlt": "Parliament and protests.",
+        "category": "Rule of Law",
+        "dateline": "Tbilisi",
+        "publishedAt": "Mar 12, 2025 · 18:00"
+      },
+      {
+        "id": "ge3",
+        "title": "Georgia’s Ruling Party and Opposition Clash Over EU Candidacy",
+        "dek": "Brussels has made clear that backsliding on reforms will have consequences.",
+        "imageUrl": "/images/19.jpg",
+        "imageAlt": "Political debate in Georgia.",
+        "category": "EU",
+        "dateline": "Tbilisi",
+        "publishedAt": "Mar 11, 2025 · 12:45"
+      },
+      {
+        "id": "ge4",
+        "title": "Abkhazia and South Ossetia Cast Shadow Over Georgia’s Sovereignty",
+        "dek": "Russian-backed regions remain a flashpoint as Tbilisi seeks NATO and EU integration.",
+        "imageUrl": "/images/20.png",
+        "imageAlt": "Conflict and borders.",
+        "category": "Security",
+        "dateline": "Tbilisi",
+        "publishedAt": "Mar 10, 2025 · 07:30"
+      }
+    ]
+  },
+  {
+    "id": "armenia",
+    "label": "Armenia",
+    "description": "Strategic crossroads, security and domestic unrest after the conflict.",
+    "items": [
+      {
+        "id": "am1",
+        "title": "After The Conflict: Armenia’s Leaders Face A Strategic Crossroads",
+        "dek": "With security guarantees in flux, Yerevan looks for new partners while managing domestic unrest.",
+        "imageUrl": "/images/21.jpg",
+        "imageAlt": "Government building and square in Yerevan, Armenia.",
+        "category": "Politics",
+        "dateline": "Yerevan",
+        "publishedAt": "Mar 13, 2025 · 14:50"
+      },
+      {
+        "id": "am2",
+        "title": "Yerevan Deepens Ties With West as Russia’s Influence Wanes",
+        "dek": "Military and diplomatic shifts signal a historic reorientation.",
+        "imageUrl": "/images/22.jpg",
+        "imageAlt": "Diplomatic meetings.",
+        "category": "Foreign Policy",
+        "dateline": "Yerevan",
+        "publishedAt": "Mar 12, 2025 · 09:35"
+      },
+      {
+        "id": "am3",
+        "title": "Armenia’s Opposition Demands Accountability After Territorial Losses",
+        "dek": "Street protests and resignations keep the government under pressure.",
+        "imageUrl": "/images/23.jpeg",
+        "imageAlt": "Protest in Yerevan.",
+        "category": "Domestic",
+        "dateline": "Yerevan",
+        "publishedAt": "Mar 11, 2025 · 17:10"
+      },
+      {
+        "id": "am4",
+        "title": "Border Delimitation and Peace Talks With Azerbaijan Remain Fragile",
+        "dek": "Negotiations continue as both sides weigh ceasefire and long-term settlement.",
+        "imageUrl": "/images/24.jpg",
+        "imageAlt": "Border and diplomacy.",
+        "category": "Peace Process",
+        "dateline": "Yerevan",
+        "publishedAt": "Mar 10, 2025 · 13:00"
+      }
+    ]
+  }
+]
