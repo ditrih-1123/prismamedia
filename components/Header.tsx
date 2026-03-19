@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import { List, X } from "@phosphor-icons/react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { CURRENCIES, fetchRates } from "@/lib/currencies";
@@ -89,9 +90,9 @@ export function Header() {
         </div>
       </div>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <a href="#" className="font-sans text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-2xl">
+        <Link href="/" className="font-sans text-xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-2xl">
           Prisma<span className="font-normal">Media</span>
-        </a>
+        </Link>
 
         <nav
           aria-label="Main navigation"
