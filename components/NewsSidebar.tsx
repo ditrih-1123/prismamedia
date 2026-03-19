@@ -3,6 +3,7 @@ import { formatMainStoriesDate } from "@/lib/dateUtils";
 import { SectionHeader } from "@/components/SectionHeader";
 import { LatestDigest } from "@/components/LatestDigest";
 import { TrustInPrimeMinisters } from "@/components/TrustInPrimeMinisters";
+import { articleUrlFromItem } from "@/lib/articleUrl";
 
 type SidebarItem = {
   id: string;
@@ -47,7 +48,7 @@ export function NewsSidebar() {
         {limitedItems.slice(0, firstHalfCount).map((item) => (
           <li key={item.id}>
             <a
-              href={`#article-${item.id}`}
+              href={articleUrlFromItem(item)}
               className="group block min-h-[2.75rem] rounded-lg py-2 transition-colors hover:bg-zinc-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 dark:hover:bg-zinc-800 dark:focus-visible:ring-zinc-100 dark:focus-visible:ring-offset-zinc-900 sm:min-h-0 sm:py-1.5 lg:py-1"
               aria-label={`Read: ${item.title}`}
             >
@@ -79,7 +80,7 @@ export function NewsSidebar() {
         {limitedItems.slice(firstHalfCount).map((item) => (
           <li key={item.id}>
             <a
-              href={`#article-${item.id}`}
+              href={articleUrlFromItem(item)}
               className="group block min-h-[2.75rem] rounded-lg py-2 transition-colors hover:bg-zinc-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 dark:hover:bg-zinc-800 dark:focus-visible:ring-zinc-100 dark:focus-visible:ring-offset-zinc-900 sm:min-h-0 sm:py-1.5 lg:py-1"
               aria-label={`Read: ${item.title}`}
             >

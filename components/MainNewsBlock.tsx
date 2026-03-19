@@ -3,6 +3,7 @@ import type { NewsItem } from "@/lib/news";
 import { FeaturedCard } from "@/components/FeaturedCard";
 import { StandardCard } from "@/components/StandardCard";
 import { SectionHeader } from "@/components/SectionHeader";
+import { articleUrlFromItem } from "@/lib/articleUrl";
 
 const mainStories: NewsItem[] = topicSections
   .flatMap((section) => section.items)
@@ -23,7 +24,7 @@ export function MainNewsBlock() {
       <div className="grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-2 lg:items-start">
         <FeaturedCard
           article={featured}
-          href={`#article-${featured.id}`}
+          href={articleUrlFromItem(featured)}
         />
         {rest.length > 0 && (
           <ul className="list-none space-y-4 p-0 m-0 sm:space-y-6">
@@ -31,7 +32,7 @@ export function MainNewsBlock() {
               <li key={article.id}>
                 <StandardCard
                   article={article}
-                  href={`#article-${article.id}`}
+                  href={articleUrlFromItem(article)}
                 />
               </li>
             ))}

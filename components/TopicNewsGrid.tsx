@@ -3,6 +3,7 @@ import Image from "next/image";
 import { formatMainStoriesDate } from "@/lib/dateUtils";
 import { NewsBlockCard } from "@/components/NewsBlockCard";
 import { SectionHeader } from "@/components/SectionHeader";
+import { articleUrlFromItem } from "@/lib/articleUrl";
 
 const linkClass =
   "group flex rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-100 dark:focus-visible:ring-offset-zinc-900";
@@ -36,7 +37,7 @@ function CzechRepublicLayout({ section }: TopicNewsGridProps) {
         <li key={item.id} className={i === 0 ? "border-b border-zinc-200 pb-4 dark:border-zinc-700 sm:pb-6" : undefined}>
           <NewsBlockCard
             article={item}
-            href={`#article-${item.id}`}
+            href={articleUrlFromItem(item)}
             featured={i === 0}
           />
         </li>
@@ -51,7 +52,7 @@ function SlovakiaLayout({ section }: TopicNewsGridProps) {
     <ul className="grid list-none grid-cols-1 gap-4 p-0 m-0 sm:grid-cols-2 sm:gap-6">
       {section.items.map((item) => (
         <li key={item.id}>
-          <ArticleLink href={`#article-${item.id}`} ariaLabel={`Read: ${item.title}`}>
+          <ArticleLink href={articleUrlFromItem(item)} ariaLabel={`Read: ${item.title}`}>
             <article className="flex flex-col">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm bg-zinc-100 dark:bg-zinc-800">
                 <Image
@@ -81,7 +82,7 @@ function HungaryLayout({ section }: TopicNewsGridProps) {
     <ul className="list-none space-y-4 p-0 m-0 sm:space-y-6">
       {section.items.map((item) => (
         <li key={item.id}>
-          <ArticleLink href={`#article-${item.id}`} ariaLabel={`Read: ${item.title}`} className="flex gap-4">
+          <ArticleLink href={articleUrlFromItem(item)} ariaLabel={`Read: ${item.title}`} className="flex gap-4">
             <div className="relative h-24 w-28 shrink-0 overflow-hidden rounded-sm bg-zinc-100 dark:bg-zinc-800 sm:h-28 sm:w-36">
               <Image
                 src={item.imageUrl}
@@ -111,7 +112,7 @@ function MoldovaLayout({ section }: TopicNewsGridProps) {
     <ul className="grid list-none grid-cols-1 gap-4 p-0 m-0 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6">
       {section.items.map((item) => (
         <li key={item.id}>
-          <NewsBlockCard article={item} href={`#article-${item.id}`} imageBetween />
+          <NewsBlockCard article={item} href={articleUrlFromItem(item)} imageBetween />
         </li>
       ))}
     </ul>
@@ -126,7 +127,7 @@ function GeorgiaLayout({ section }: TopicNewsGridProps) {
   return (
     <div className="grid grid-cols-1 gap-4 p-0 m-0 sm:gap-6 lg:grid-cols-3 lg:items-stretch">
       <div className="lg:col-span-2">
-        <ArticleLink href={`#article-${lead.id}`} ariaLabel={`Read: ${lead.title}`} className="h-full">
+        <ArticleLink href={articleUrlFromItem(lead)} ariaLabel={`Read: ${lead.title}`} className="h-full">
           <article className="flex h-full flex-col">
             <div className="relative aspect-[2/1] w-full overflow-hidden rounded-sm bg-zinc-100 dark:bg-zinc-800">
               <Image
@@ -148,7 +149,7 @@ function GeorgiaLayout({ section }: TopicNewsGridProps) {
       <ul className="grid list-none grid-cols-1 grid-rows-3 gap-4 p-0 m-0 sm:grid-cols-3 sm:grid-rows-1 sm:gap-6 sm:items-stretch lg:h-full lg:grid-cols-1 lg:grid-rows-3">
         {rest.map((item) => (
           <li key={item.id} className="flex h-full min-h-0">
-            <ArticleLink href={`#article-${item.id}`} ariaLabel={`Read: ${item.title}`} className="flex h-full min-h-0 w-full">
+            <ArticleLink href={articleUrlFromItem(item)} ariaLabel={`Read: ${item.title}`} className="flex h-full min-h-0 w-full">
               <article className="flex h-full w-full flex-row items-start gap-4 text-left">
                 <div className="relative aspect-square h-20 w-20 shrink-0 overflow-hidden rounded-sm bg-zinc-100 dark:bg-zinc-800 sm:h-24 sm:w-24">
                   <Image
@@ -181,7 +182,7 @@ function ArmeniaLayout({ section }: TopicNewsGridProps) {
     <ul className="grid list-none grid-cols-1 gap-4 p-0 m-0 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6">
       {section.items.map((item) => (
         <li key={item.id}>
-          <NewsBlockCard article={item} href={`#article-${item.id}`} imageBetween />
+          <NewsBlockCard article={item} href={articleUrlFromItem(item)} imageBetween />
         </li>
       ))}
     </ul>
